@@ -1,0 +1,62 @@
+Java 1.8
+Java SE 8 Programmer I 1Z0-808
+
+https://www.exam-labs.com/info/1z0-808
+https://www.certification-questions.com/java-exam/1z0-808-dumps.html
+https://www.myexamcloud.com/onlineexam/viewExam.html?t=Uc1TNwrGb08=#
+
+* Encapsular comportamiento de codigos en clases y definir interfaces para representar la funcion.
+
+# Funciones en Java.
+ - Es como un metodo estatico. 
+ - Lambdas Expresion o funciones anonimas
+ - Predicate types
+
+ Syntax "::" es, use este metodo como un valor.
+
+# Streams en Java (MultiThread)
+
+- Procesamiento secuencial
+- Procesamiento paralelo
+
+# Metodo Default en interfaces
+
+# Lambdas Expression
+
+- Usar lambda como parametro de entrada para una interfaz.
+- Interfaces Funcionales, son las que definen solo 1 metodo.
+- Cuando es una interfaz funcional, la implementación de esta se puede hacer a traves de Lambda.
+- Anotacion @FunctionalInterface
+- Para evaluar booleanos, usar interface "Predicate"
+- Para tratamiento de objetos sin retorno (void), usar interface "Consumer"
+- Para recibir un objeto y devolver otro, usar interface "Function"
+- Para no recibir parametros y devolver un valor, usar interface "Supplier"
+- Para recibir 2 objetos y retornar otro, usar interface "BiFunction"
+- Para recibir 2 objetos sin retorno (void), usar interface "ToIntBiFunction"
+- Revisar las interfaces de Function package
+
+# Referncias de metodos
+
+- Cuando una expresion lambda llama directamente a un metodo, se puede reemplzar con una referencia de metodo "Class::Method"
+- Tambien se puede usar la referncia a un contructor "Class:new"
+
+# Stream API
+
+- Filtrar, ordenar, agrupar listas con un metodo simple.
+- Es como hacer querys en base de datos.
+- Permite uso de hilos paralelamente de manera interna, para mejorar perfomance.
+- Operaciones
+    -> Intermediarias - Retornan un stream
+    - Filter, filtrar por un Predicate
+    - Map, obtener un valor especifico
+    - Limit, limitar retorno
+    - Sorted, ordena el stream
+    - Distinct, elimina los duplicados en base al metodo "equals" del objeto
+    - Skip, elimina los primeros "n"
+    - Mapping, extrae una parte de la lista original, es como una nueva lista de lo que estaba contendio
+    - FlatMap, --> Buscar mas info
+    -> Terminales - Retorna un objeto distinto a stream
+    - Collect, agrupar resultado
+    - Count, contar registros
+    - ForEach, recorrer el stream
+- 
