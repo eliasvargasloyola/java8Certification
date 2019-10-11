@@ -8,11 +8,14 @@ import org.junit.runners.JUnit4;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toList;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(JUnit4.class)
 public class StreamsApiTest {
@@ -112,9 +115,45 @@ public class StreamsApiTest {
 
         pairs = pairs.stream().filter(ints -> (ints[0] + ints[1]) % 3 == 0).collect(toList());
 
-        pairs.stream().forEach(ints -> {System.out.println("("+ints[0]+","+ints[1]+")");});
+        pairs.stream().forEach(ints -> {
+            System.out.println("(" + ints[0] + "," + ints[1] + ")");
+        });
 
     }
 
+    @Test
+    public void testMatchStreams() {
+        // Any Match
+        Boolean oneVegetarian = menu.stream().anyMatch(Dish::isVegetarian);
+
+        assertTrue(oneVegetarian);
+
+        //All Match
+        Boolean allVegetarian = menu.stream().allMatch(Dish::isVegetarian);
+
+        assertFalse(allVegetarian);
+
+        //None Match
+        Boolean noneExtraCalories = menu.stream().noneMatch(dish -> dish.getCalories() > 1000);
+
+        assertTrue(noneExtraCalories);
+    }
+
+    @Test
+    public void testFindElementStream() {
+
+        // Find any
+        Optional<Dish> vegetarian = menu.stream().filter(Dish::isVegetarian).findAny();
+
+        assertTrue(vegetarian.isPresent());
+
+        //Find First
+        Optional<Dish> dishFishLowCalories = menu.stream().filter(dish -> dish.getType().equals(Dish.Type.FISH) && dish.getCalories() < 350).findFirst();
+
+        assertTrue(vegetarian.isPresent());
+        assertEquals(vegetarian.get().getType(), Dish.Type.FISH);
+        assertTrue(vegetarian.get().getCalories() < 350);
+
+    }
 
 }
