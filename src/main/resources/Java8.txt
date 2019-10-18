@@ -61,6 +61,7 @@ https://www.myexamcloud.com/onlineexam/viewExam.html?t=Uc1TNwrGb08=#
     - ForEach, recorrer el stream
 - Matchers (AnyMatch, AllMatch, NoneMatch)
 - Finders (FindAny, FindFirst)
+- Reduce
 
 # Optional
 
@@ -72,3 +73,4 @@ https://www.myexamcloud.com/onlineexam/viewExam.html?t=Uc1TNwrGb08=#
 - ifPresent(Consumer<T> block) Ejecuta el codigo pasado si el valor está presente
 - T get() Retorna el objeto si está presente, sino da error
 - T orElse(T other) Si el valor está presente lo devuelve, sino retorna el por defecto que es pasado en la firma.
+
