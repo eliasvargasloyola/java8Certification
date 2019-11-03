@@ -62,6 +62,7 @@ https://www.myexamcloud.com/onlineexam/viewExam.html?t=Uc1TNwrGb08=#
 - Matchers (AnyMatch, AllMatch, NoneMatch)
 - Finders (FindAny, FindFirst)
 - Reduce --> Buscar mas info
+- Stream Especiales para tipos de datos, al momento de mapear (mapToInt, mapToDouble, mapToLong), puedes usar los metodos de los tipos de datos en todo el stream.
 
 # Optional
 
@@ -73,4 +74,11 @@ https://www.myexamcloud.com/onlineexam/viewExam.html?t=Uc1TNwrGb08=#
 - ifPresent(Consumer<T> block) Ejecuta el codigo pasado si el valor está presente
 - T get() Retorna el objeto si está presente, sino da error
 - T orElse(T other) Si el valor está presente lo devuelve, sino retorna el por defecto que es pasado en la firma.
+
+# Collection
+
+- Se puede agrupar por varios tipos.
+- Maximo, minimo y sumar valores.
+
+6.2.1
 

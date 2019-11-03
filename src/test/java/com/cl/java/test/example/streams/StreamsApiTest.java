@@ -12,10 +12,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toList;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 @RunWith(JUnit4.class)
 public class StreamsApiTest {
@@ -153,6 +150,14 @@ public class StreamsApiTest {
         assertTrue(vegetarian.isPresent());
         assertEquals(vegetarian.get().getType(), Dish.Type.FISH);
         assertTrue(vegetarian.get().getCalories() < 350);
+
+    }
+
+    @Test
+    public void testSpecialistStreams() {
+
+        Integer totalCal = menu.stream().mapToInt(Dish::getCalories).sum();
+        System.out.println("Total calories " + totalCal);
 
     }
 
