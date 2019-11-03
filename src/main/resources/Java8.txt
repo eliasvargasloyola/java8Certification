@@ -54,14 +54,14 @@ https://www.myexamcloud.com/onlineexam/viewExam.html?t=Uc1TNwrGb08=#
     - Distinct, elimina los duplicados en base al metodo "equals" del objeto
     - Skip, elimina los primeros "n"
     - Mapping, extrae una parte de la lista original, es como una nueva lista de lo que estaba contendio
-    - FlatMap, --> Buscar mas info
+    ** FlatMap, --> Buscar mas info
     -> Terminales - Retorna un objeto distinto a stream
     - Collect, agrupar resultado
     - Count, contar registros
     - ForEach, recorrer el stream
 - Matchers (AnyMatch, AllMatch, NoneMatch)
 - Finders (FindAny, FindFirst)
-- Reduce
+- Reduce --> Buscar mas info
 
 # Optional
 
