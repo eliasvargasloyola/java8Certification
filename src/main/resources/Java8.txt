@@ -79,6 +79,15 @@ https://www.myexamcloud.com/onlineexam/viewExam.html?t=Uc1TNwrGb08=#
 
 - Se puede agrupar por varios tipos.
 - Maximo, minimo y sumar valores.
+- Colectores predefinidos.
+- Colectores pueden.
+    - Reducir y sumar
+    - Agrupar
+    - Dividir
+- Se pueden crear propios colectores.
 
-6.2.1
+# Collection , Reducir y Sumar
+
+- 6.2.2
+
 
