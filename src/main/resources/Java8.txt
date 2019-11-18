@@ -85,9 +85,6 @@ https://www.myexamcloud.com/onlineexam/viewExam.html?t=Uc1TNwrGb08=#
     - Agrupar
     - Dividir
 - Se pueden crear propios colectores.
-
-# Collection , Reducir y Sumar
-
-- 6.2.2
-
+- Se puede obtener todas las estadisticas basicas de una lista (minimo, maximo, promedio, suma, conteo) usando SummaryStatics
+- Se puede unir elementos por un delimitador con "joining"
 
