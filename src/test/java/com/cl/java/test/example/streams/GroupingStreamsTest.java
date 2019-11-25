@@ -65,12 +65,32 @@ public class GroupingStreamsTest {
     }
 
     @Test
-    public void testGroupDifferentCollector(){
+    public void testGroupDifferentCollector() {
 
         Map<Dish.Type, Dish> mostCaloricByType = menu.stream().collect(Collectors.groupingBy(Dish::getType, Collectors.collectingAndThen(Collectors.maxBy(Comparator.comparingInt(Dish::getCalories)), Optional::get)));
         assertEquals(3, mostCaloricByType.size());
 
     }
+
+    @Test
+    public void testPartiotiningGroup() {
+
+        Map<Boolean, List<Dish>> partitionMenu = menu.stream().collect(Collectors.partitioningBy(Dish::isVegetarian));
+
+        assertEquals(2, partitionMenu.size());
+
+    }
+
+    @Test
+    public void testPartiotiningGroupMultiCollector() {
+
+        Map<Boolean, Map<Dish.Type, List<Dish>>> partitionMenu = menu.stream().collect(Collectors.partitioningBy(Dish::isVegetarian, Collectors.groupingBy(Dish::getType)));
+
+        assertEquals(2, partitionMenu.size());
+        assertEquals(2, partitionMenu.get(false).size());
+
+    }
+
 
 
 
