@@ -88,3 +88,15 @@ https://www.myexamcloud.com/onlineexam/viewExam.html?t=Uc1TNwrGb08=#
 - Se puede obtener todas las estadisticas basicas de una lista (minimo, maximo, promedio, suma, conteo) usando SummaryStatics
 - Se puede unir elementos por un delimitador con "joining"
 
+#Default Interface
+
+- Pueden haber N metodos default
+- Son metodos que tienen una implementación por defecto, por lo que no es obligacion sobre escribirlos
+- La diferencia con las clases abstractas, es que una clase abstracta solo se puede heredar una y las interfaces se pueden implementar N.
+- Se pueden dejar metodos por defecto con excepciones que ese metodo no es soportado.
+- Separar metodos de una clase en N interfacess
+- Las reglas de solucion
+	1.- Los metodos de las clases siempre ganan por sobre el metodo por defecto.
+	2.- Las sub interfaces ganan, si tienes varias interfaces con el mismo metodo por defecto, manda la que este dentro de otra.
+	3.- Definir explicitamente cual metodo usar
+
