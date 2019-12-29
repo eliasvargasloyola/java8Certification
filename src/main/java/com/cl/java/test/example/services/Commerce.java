@@ -1,4 +1,4 @@
-package com.cl.java.test.example;
+package com.cl.java.test.example.services;
 
 import com.cl.java.test.example.domain.Dish;
 import com.cl.java.test.example.interfaces.Cart;

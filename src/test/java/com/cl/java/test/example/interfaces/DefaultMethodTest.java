@@ -1,6 +1,6 @@
 package com.cl.java.test.example.interfaces;
 
-import com.cl.java.test.example.Commerce;
+import com.cl.java.test.example.services.Commerce;
 import com.cl.java.test.example.domain.Dish;
 import org.junit.Test;
 import org.junit.runner.RunWith;
