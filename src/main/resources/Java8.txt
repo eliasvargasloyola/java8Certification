@@ -100,3 +100,7 @@ https://www.myexamcloud.com/onlineexam/viewExam.html?t=Uc1TNwrGb08=#
 	2.- Las sub interfaces ganan, si tienes varias interfaces con el mismo metodo por defecto, manda la que este dentro de otra.
 	3.- Definir explicitamente cual metodo usar
 
+#Completable Future
+
+
+
