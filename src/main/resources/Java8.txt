@@ -102,5 +102,22 @@ https://www.myexamcloud.com/onlineexam/viewExam.html?t=Uc1TNwrGb08=#
 
 #Completable Future
 
+thenApply Una vez termina el hilo, transforme el valor (Es como un map)
+thenAccept Una vez terminado el hilo, haga lo siguiente (Pero no retorna valor)
+thenCompose Concatena otro hilo, al finalizar el actual. (Una vez termine este hilo, ejecutar este otro)
+thenCombine Combina 2 hilos y el resultado de ambos, vuelve en una BiFunction.
+
+Si usas los metodos variantes con el apendice "Async" es el mismo comportamiento, solo la operacion, la hace en un hilo aparte y no usa el mismo. Ojo, que si se usa esto, tiene que haber un hilo disponible para hacerlo, sino espera que haya uno.
+
+
+CompletableFuture.allOf Cuando todos los hilos de esta lista, esten listos, haga lo siguiente.
+CompletableFuture.anyOf Cuando uno de los hilos de esta lista, este  listo, haz lo siguiente.
+
+
+N threads = N CPU * U CPU * (1 + W/C)
+where
+ N CPU is the number of cores, available through Runtime.getRuntime().availableProcessors()
+ U CPU is the target CPU utilization (between 0 and 1), and
+ W/C is the ratio of wait time to compute time
 
 

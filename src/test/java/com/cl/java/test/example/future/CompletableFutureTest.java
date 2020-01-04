@@ -146,6 +146,9 @@ public class CompletableFutureTest {
         }, exe)).map(future -> future.thenApply(Quote::parse))
                 .map(future -> future.thenCompose(quote -> CompletableFuture.supplyAsync(() -> Discount.applyDiscount(quote), exe)))
                 .collect(Collectors.toList());
+        CompletableFuture[] newFutures = pricesFutures.toArray(new CompletableFuture[0]);
+
+        CompletableFuture.allOf(newFutures).thenAccept(aVoid -> System.out.println("ALV :v"));
 
         List<String> prices = pricesFutures.stream().map(CompletableFuture::join).collect(Collectors.toList());
 
