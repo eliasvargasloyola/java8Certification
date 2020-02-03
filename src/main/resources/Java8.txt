@@ -120,4 +120,14 @@ where
  U CPU is the target CPU utilization (between 0 and 1), and
  W/C is the ratio of wait time to compute time
 
+# LocalDateTime
+
+1.- LocalDate para las fechas
+2.- LocalTime para las horas
+3.- LocalDateTime para fechas y horas.
+
+- Duration, se usa para medir periodos de horas.
+- Period, se usa para medir periodos de fechas.
+
+
 
