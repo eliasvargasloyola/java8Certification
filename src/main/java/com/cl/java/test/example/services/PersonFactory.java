@@ -6,6 +6,8 @@ import java.util.Random;
 
 public class PersonFactory {
 
+    public int gola;
+
     public Person getPerson() {
         int number = new Random().nextInt(10 + 1);
         if (number >= 7) {
