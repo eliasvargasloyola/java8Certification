@@ -13,6 +13,7 @@ import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.stream.Collectors;
@@ -94,7 +95,7 @@ public class CompletableFutureTest {
     @Test
     public void testExecutorAsyncListOfPricesParallel() {
 
-        Executor exe = Executors.newFixedThreadPool(Math.min(shops.size(), 100), r -> {
+        ExecutorService exe = Executors.newFixedThreadPool(Math.min(shops.size(), 100), r -> {
             Thread t = new Thread(r);
             t.setDaemon(true);
             return t;
@@ -104,6 +105,7 @@ public class CompletableFutureTest {
         String product = "GALAXY s11";
         List<CompletableFuture<String>> pricesFutures = shops.parallelStream().map(sp -> CompletableFuture.supplyAsync(() -> String.format("%s price is %.2f", sp.getName(), sp.calculatePrice(product)), exe)).collect(Collectors.toList());
         List<String> prices = pricesFutures.stream().map(CompletableFuture::join).collect(Collectors.toList());
+        exe.shutdown();
         System.out.println(prices.toString());
         long duration = (System.nanoTime() - start) / 1_000_000;
         System.out.println("Done in " + duration + " msecs");
